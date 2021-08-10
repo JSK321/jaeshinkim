@@ -3,15 +3,15 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
     name: {
         flexGrow: 1,
         display: 'flex',
         justifyContent: 'center',
         border: '1px solid pink',
-        fontSize: "100px"
+        fontSize: "100px",
+        '@media(max-width:450px)': {
+            fontSize: '80px'
+        }
     },
     title: {
         flexGrow: 1,
@@ -19,36 +19,44 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         border: '1px solid pink',
         fontSize: '40px',
-        '@media(max-width:450px)' : {
-            textAlign:'center'
+        '@media(max-width:450px)': {
+            textAlign: 'center'
         }
     },
-    toolbar: {
-        minHeight: 75,
-        // alignItems: 'flex-start',
-        justifyContent:'center',
+    navContent: {
+        alignItems: 'flex-start',
+        justifyContent: 'center',
         paddingTop: theme.spacing(1),
         paddingBottom: theme.spacing(2),
         border: '1px solid pink'
     },
     links: {
-        marginLeft:"1rem",
-        marginRight:'1rem',
-        '@media(max-width:450px)' : {
-            fontSize:"20px",
-            marginLeft:"0.5rem",
-            marginRight:'0.5rem',
+        marginLeft: "1rem",
+        marginRight: '1rem',
+        '@media(max-width:450px)': {
+            fontSize: "20px",
+            marginLeft: "0.5rem",
+            marginRight: '0.5rem',
+        },
+        '@media(max-width:400px)': {
+            fontSize: '18px'
         }
     },
+    emptyDiv: {
+        height: 315,
+        '@media(max-width:400px)' : {
+            height: 335
+        }
+    }
 }));
 
-export default function ProminentAppBar() {
+export default function Nav() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div>
             <AppBar position="absolute">
-                <Toolbar className={classes.toolbar}>
+                <Toolbar className={classes.navContent}>
                     <Typography className={classes.links} variant="h5">
                         About Me
                     </Typography>
@@ -69,6 +77,7 @@ export default function ProminentAppBar() {
                     Full Stack Web Developer
                 </Typography>
             </AppBar>
+            <Toolbar className={classes.emptyDiv}/>
         </div>
     );
 }
