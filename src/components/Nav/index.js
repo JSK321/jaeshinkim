@@ -1,83 +1,69 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import * as React from 'react';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Avatar,
+  Typography
+} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu';
+import { css } from '@emotion/react'
+import Picture from '../../utils/Images/me.jpg'
 
-const useStyles = makeStyles((theme) => ({
-    name: {
-        flexGrow: 1,
-        display: 'flex',
-        justifyContent: 'center',
-        border: '1px solid pink',
-        fontSize: "100px",
-        '@media(max-width:450px)': {
-            fontSize: '80px'
-        }
-    },
-    title: {
-        flexGrow: 1,
-        display: 'flex',
-        justifyContent: 'center',
-        border: '1px solid pink',
-        fontSize: '40px',
-        '@media(max-width:450px)': {
-            textAlign: 'center'
-        }
-    },
-    navContent: {
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        paddingTop: theme.spacing(1),
-        paddingBottom: theme.spacing(2),
-        border: '1px solid pink'
-    },
-    links: {
-        marginLeft: "1rem",
-        marginRight: '1rem',
-        '@media(max-width:450px)': {
-            fontSize: "20px",
-            marginLeft: "0.5rem",
-            marginRight: '0.5rem',
-        },
-        '@media(max-width:400px)': {
-            fontSize: '18px'
-        }
-    },
-    emptyDiv: {
-        height: 315,
-        '@media(max-width:400px)' : {
-            height: 335
-        }
-    }
-}));
+const styles = {
+  nav: css`
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+  `,
+  content: css`
+  display: flex;
+  justify-content: space-evenly;
+  `,
+  avatar: css`
+  display: flex;
+  &:hover {
+    cursor: pointer;
+  }
+  `,
+  name: css`
+  letter-spacing: 3px;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  `,
+}
 
-export default function Nav() {
-    const classes = useStyles();
+export default function ButtonAppBar() {
+  const handleAvatarClick = event => {
+    console.log("haru")
+  }
 
-    return (
-        <div>
-            <AppBar position="absolute">
-                <Toolbar className={classes.navContent}>
-                    <Typography className={classes.links} variant="h5">
-                        About Me
-                    </Typography>
-                    <Typography className={classes.links} variant="h5">
-                        Projects
-                    </Typography>
-                    <Typography className={classes.links} variant="h5">
-                        Skills
-                    </Typography>
-                    <Typography className={classes.links} variant="h5">
-                        Contact
-                    </Typography>
-                </Toolbar>
-                <Typography className={classes.name}>
-                    Jae Kim
-                </Typography>
-                <Typography className={classes.title}>
-                    Full Stack Web Developer
-                </Typography>
-            </AppBar>
-            <Toolbar className={classes.emptyDiv}/>
-        </div>
-    );
+  return (
+    <Box sx={{ flexGrow: 1, marginTop: '1.5rem' }}>
+      <AppBar position="static" sx={styles.nav}>
+        <Toolbar
+          sx={styles.content}
+        >
+          <Box sx={styles.avatar} onClick={handleAvatarClick}>
+            <Avatar
+              alt='Jae Kim'
+              src={Picture}
+              sx={{ width: 56, height: 56 }}
+            />
+            <Typography variant="h5" component="div" sx={styles.name}>
+              JAE KIM
+            </Typography>
+          </Box>
+          <IconButton
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon sx={{ fontSize: 40 }} />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }

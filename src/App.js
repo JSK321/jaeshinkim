@@ -8,7 +8,7 @@ function App() {
     <>
       <Nav />
       {/* <img src="https://i.redd.it/iv219dqg2ef71.jpg"></img> */}
-      <AboutMe />
+      {/* <AboutMe /> */}
     </>
   );
 }
