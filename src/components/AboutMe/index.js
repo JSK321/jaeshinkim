@@ -1,42 +1,119 @@
-// import React from 'react'
-// import { Grid } from '@material-ui/core'
-// import { makeStyles } from '@material-ui/core/styles';
-// import Picture from '../../utils/Images/me.jpg'
+import React from 'react'
+// MUI
+import { Box, Grid, Typography, IconButton, Button } from '@mui/material'
+// styles
+import { css } from '@emotion/react'
+import './styles.css'
+// Profile picture
+import Picture from '../../utils/Images/me.jpg'
+// MUI Icons
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         flexGrow: 1,
-//         marginTop: '1rem',
-//     },
-//     aboutMeGrid: {
-//         display:"flex",
-//         justifyContent:'center',
-//         fontSize:'24px',
-//         border: '1px solid pink'
-//     },
-//     profilePic: {
-//         width: 500,
-//         objectFit: 'contain'
-//     }
-// }));
+const styles = {
+    box: css`
+    border: 1px solid pink;
+    `,
+    pic: css`
+    display: flex;
+    justify-content: center;
+    `,
+    iconBtn: css`
+    margin-left: 4.5rem;
+    `,
+    icons: css`
+    font-size: 45px;
+    `,
+}
 
-// export default function AboutMe() {
-//     const classes = useStyles();
+export default function AboutMe() {
+    return (
+        <Box sx={styles.box}>
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={6}
+                    sx={styles.pic}
+                >
+                    <img
+                        src={Picture}
+                        alt="profile picture"
+                        className="profilePic"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <h1
+                        className="aboutTitle"
+                    >
+                        About
+                    </h1>
+                    <div>
+                        <Typography
+                            variant="h4"
+                            component="h4"
+                            className="aboutMeName"
+                        >
+                            Hi! I'm Jae Kim
+                        </Typography>
 
-//     return (
-//         <div className={classes.root}>
-//             <Grid container spacing={1}>
-//                 <Grid item xs={6} className={classes.aboutMeGrid}>
-//                     <img src={Picture} alt="profile picture" className={classes.profilePic}/>
-//                 </Grid>
-//                 <Grid item xs={6} className={classes.aboutMeGrid}>
-//                     I am full-stack web developer who is persistent at completing set goals. Even when goals are not met, I do not let them discourage me from continuing forward.
-//                     I love to be engaged with my hands, and being able to code will provide a new outlet to test my creativity.
-//                     I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
-//                     However, with little experience in the field, I still have much to learn and I am always willing to develop new traits.
-//                     I have been in the service industry for many years, and it has taught me to give the most effort into a task to deliver the most satisfying result.
-//                 </Grid>
-//             </Grid>
-//         </div>
-//     )
-// }
+                        <Typography
+                            variant="p"
+                            component="p"
+                            className="aboutMe"
+                        >
+                            I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
+                            I still have much to learn and I am always willing to develop new traits.
+                            I have been in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
+                        </Typography>
+
+                        <Typography
+                            variant="p"
+                            component="p"
+                            className="resume"
+                        >
+                            Check out my resume
+                        </Typography>
+
+                        <Box sx={styles.iconBtn}>
+                            <IconButton
+                                color="primary"
+                            >
+                                <LinkedInIcon
+                                    sx={styles.icons}
+                                />
+                            </IconButton>
+                            <IconButton
+                                color="primary"
+                            >
+                                <GitHubIcon
+                                    sx={styles.icons}
+                                />
+                            </IconButton>
+                        </Box>
+                        <Box>
+                            <Typography
+                                variant="p"
+                                component="p"
+                                className="resume"
+                            >
+                                Contact me here!
+                            </Typography>
+                            <Typography
+                                variant="p"
+                                component="p"
+                                className="contactInfo"
+                            >
+                                Email: jaeshinkim321@gmail.com
+                            </Typography>
+                            <Typography
+                                variant="p"
+                                component="p"
+                                className="contactInfo"
+                            >
+                                Phone: (253) 292-7744
+                            </Typography>
+                        </Box>
+                    </div>
+                </Grid>
+            </Grid>
+        </Box>
+    )
+}

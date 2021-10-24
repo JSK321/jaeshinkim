@@ -29,7 +29,7 @@ const styles = {
   }
   `,
   name: css`
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   margin-left: 0.5rem;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ export default function ButtonAppBar() {
             <Avatar
               alt='Jae Kim'
               src={Picture}
-              sx={{ width: 56, height: 56 }}
+              sx={{ width: 56, height: 56}}
             />
             <Typography variant="h5" component="div" sx={styles.name}>
               JAE KIM

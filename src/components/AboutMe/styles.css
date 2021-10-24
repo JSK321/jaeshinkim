@@ -1,0 +1,69 @@
+body {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.profilePic {
+    width: 450px;
+    height: 550px;
+    /* transform: translateX(350px) */
+}
+
+.aboutTitle {
+    position: absolute;
+    font-size: 10rem;
+    font-weight: 700;
+    opacity: 0.5;
+    color: grey;
+    text-transform: uppercase;
+    margin: 0;
+    user-select: none;
+}
+
+.aboutMeName {
+    letter-spacing: 1px;
+    padding: 5rem;
+    margin-bottom: 3rem;
+}
+
+.aboutMe {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 5rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+.resume {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contactInfo {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 375px){
+    .profilePic {
+        width: 100%;
+        height: 450px;
+    }
+
+    .aboutTitle {
+        font-size: 0;
+    }
+
+    .aboutMeName {
+        padding: 1rem;
+    }
+
+    .aboutMe {
+        padding: 1rem;
+    }
+}

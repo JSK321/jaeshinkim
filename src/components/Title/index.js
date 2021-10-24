@@ -1,6 +1,6 @@
 import React from 'react'
 // MUI
-import { Box, Typography } from '@mui/material'
+import { Box, Typography,} from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 // react swipeable views
@@ -10,19 +10,22 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const styles = {
   title: css`
-    border: 1px solid pink;
+    height: 937px;
     margin-top: 10rem;
     display: block;
     text-align: center;
+    @media (max-height: 375px) {
+      height: 375px
+    }
   `,
   greetings: css`
     opacity: 0.5;
     font-size: 24px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     user-select: none;
   `,
   name: css`
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     margin-top: 1rem;
     font-weight: bold;
     user-select: none;
@@ -46,8 +49,8 @@ export default function Title() {
           </Typography>
 
           <Typography
-            variant="h2"
-            component="h2"
+            variant="h3"
+            component="h3"
             sx={styles.name}
           >
             JAE KIM
@@ -63,8 +66,8 @@ export default function Title() {
           </Typography>
 
           <Typography
-            variant="h2"
-            component="h2"
+            variant="h3"
+            component="h3"
             sx={styles.name}
           >
             WEB DEVELOPER
