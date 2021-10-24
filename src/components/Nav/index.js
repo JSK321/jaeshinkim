@@ -23,6 +23,7 @@ const styles = {
   `,
   avatar: css`
   display: flex;
+  user-select: none;
   &:hover {
     cursor: pointer;
   }
