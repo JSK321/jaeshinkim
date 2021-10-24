@@ -33,6 +33,14 @@ body {
     padding-bottom: 1rem;
 }
 
+.aboutMeInfo {
+    width: 65%
+}
+
+.iconBtns {
+    margin-left: 4.5rem;
+}
+
 .resume {
     font-size: 18px;
     line-height: 1.8;
@@ -49,6 +57,12 @@ body {
     padding-bottom: 0.5rem;
 }
 
+@media screen and (max-width: 1400px) {
+    .aboutMeInfo {
+        width: 100%
+    }
+}
+
 @media screen and (max-width: 375px){
     .profilePic {
         width: 100%;
@@ -60,10 +74,26 @@ body {
     }
 
     .aboutMeName {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .aboutMe {
-        padding: 1rem;
+        padding: 1.5rem;
+    }
+
+    .iconBtns {
+        margin-left: 1rem;
+    }
+
+    .resume {
+        padding: 1.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .contactInfo {
+        padding: 1.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }

@@ -16,10 +16,7 @@ const styles = {
     `,
     pic: css`
     display: flex;
-    justify-content: center;
-    `,
-    iconBtn: css`
-    margin-left: 4.5rem;
+    justify-content: flex-end;
     `,
     icons: css`
     font-size: 45px;
@@ -45,7 +42,7 @@ export default function AboutMe() {
                     >
                         About
                     </h1>
-                    <div>
+                    <div className="aboutMeInfo">
                         <Typography
                             variant="h4"
                             component="h4"
@@ -72,7 +69,7 @@ export default function AboutMe() {
                             Check out my resume
                         </Typography>
 
-                        <Box sx={styles.iconBtn}>
+                        <Box className="iconBtns">
                             <IconButton
                                 color="primary"
                             >
