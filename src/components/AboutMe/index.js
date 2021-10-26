@@ -58,7 +58,7 @@ export default function AboutMe() {
                         >
                             I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
                             I still have much to learn and I am always willing to develop new traits.
-                            I have been in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
+                            I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
                         </Typography>
 
                         <Typography
