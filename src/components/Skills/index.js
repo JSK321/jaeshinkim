@@ -6,6 +6,15 @@ import { css } from '@emotion/react'
 import './styles.css'
 
 const styles = {
+    title: css`
+        font-weight: bold;
+        letter-spacing: 4px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+    `,
     skillsBox: css`
         display: block;
         padding: 7rem;
@@ -26,15 +35,13 @@ const styles = {
 export default function Skills() {
     return (
         <Box sx={styles.skillsBox}>
-            <div className="skillsTitle">
-                <Typography
-                    variant="h3"
-                    component="h3"
-                    style={{ fontWeight: 'bold' }}
-                >
-                    My skills
-                </Typography>
-            </div>
+            <Typography
+                variant="h3"
+                component="h3"
+                sx={styles.title}
+            >
+                SKILLS
+            </Typography>
             <Grid container spacing={1}>
                 <Grid item xs={3} sx={styles.skills}>
                     <Typography

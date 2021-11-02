@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Patched",
+        "image": "https://i.imgur.com/mAWeLvq.png",
+        "link": "https://patchedapp.herokuapp.com/",
+        "github": "https://github.com/ckomodo/garden-share",
+        "description": "Patched is a contribution to the P-Patch programs in Seattle. It aims to address the demand challenges by connecting enthusiastic gardeners.",
+        "technologies":"JavaScript, Handlebars, Express.js, Node.js, MySQL, and Foundation."
+    },
+    {
+        "id": 2,
+        "name": "HaruHaru Recipe",
+        "image": "https://i.imgur.com/oDEI1E8.png",
+        "link": "https://haruharurecipe.herokuapp.com/",
+        "github": "https://github.com/JSK321/ummas-cb",
+        "description": "HaruHaru Recipe is a website for users to share their family recipes. Originally designed to help family and friends to share recipes with ease.",
+        "technologies":"JavaScript, React.js, Express.js, Node.js, MySQL and Bootstrap."
+    },
+    {
+        "id": 3,
+        "name": "Digital Clock",
+        "image": "https://i.imgur.com/Xz7wx7I.png",
+        "link": "https://digital-mechanized-clock.herokuapp.com/",
+        "github": "https://github.com/JSK321/clock",
+        "description": "A simple 24 hour clock. A user is also able to change the clock into a timer using the buttons at the bottom.",
+        "technologies":"JavaScript, React.js, MUI, CSS."
+    },
+    {
+        "id": 4,
+        "name": "Gym Bro",
+        "image": "https://i.imgur.com/YqvpSxT.png",
+        "link": "https://dan-gentile.github.io/gym-bro/index.html",
+        "github": "https://github.com/JSK321/gym-bro",
+        "description": "A browser based workout generator that allows a user to pick an exercise critera with an option to choose a music playlist. It aims to provide people with a means to exercise during the COVID-19 pandemic.",
+        "technologies":"JavaScript, jQuery, SpotifyAPI, WgerAPI, and Foundation."
+    },
+    {
+        "id": 5,
+        "name": "My Keebs",
+        "image": "https://i.imgur.com/q7cYC9h.png",
+        "link": "https://mykeebs-react.herokuapp.com/",
+        "github": "https://github.com/JSK321/mykeebs-react",
+        "description":  "My Keebs is a personal project that showcases a hobby of mechanical keyboards. A user is able to upload their collection with custom specifications.",
+        "technologies":"JavaScript, React.js, Express.js, Node.js, MySQL and MUI."
+    },
+    {
+        "id": 6,
+        "name": "The Lion King Quiz Game",
+        "image": "https://i.imgur.com/n5m9Ssx.png",
+        "link": "https://jsk321.github.io/Quiz-Game/",
+        "github": "https://github.com/JSK321/Quiz-Game",
+        "description": "A browser based timed quiz game about The Lion King Movie. A user has 60 seconds to answer questions based on the movie and gain points for each correct answer which is saved into local storage at the end.",
+        "technologies":"JavaScript, jQuery, local storage, and Bootstrap."
+    }
+]
