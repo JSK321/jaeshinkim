@@ -38,7 +38,7 @@ const styles = {
 
 export default function ButtonAppBar() {
   const handleAvatarClick = event => {
-    console.log("haru")
+    window.location.reload()
   }
 
   return (
