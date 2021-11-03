@@ -1,11 +1,14 @@
 import React from 'react'
+// React Scroll
+import { Link } from 'react-scroll'
 // MUI
-import { Box, Typography, IconButton } from '@mui/material'
+import { Box, Typography, IconButton, Tooltip } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 // MUI Icons
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 
 const styles = {
@@ -14,6 +17,7 @@ const styles = {
     flex-direction: column;
     align-items: center;
     padding: 7rem;
+    padding-bottom: 0;
     `,
     icons: css`
     font-size: 45px;
@@ -23,6 +27,9 @@ const styles = {
     `,
     copyright: css`
     padding: 4rem;
+    `,
+    arrowUp: css`
+    margin: 4rem;
     `,
 }
 
@@ -68,6 +75,19 @@ export default function Footer() {
             >
                 jaeshinkim321@gmail.com
             </Typography>
+            <Link
+                activeClass="active"
+                to="top"
+                spy={true}
+                smooth={true}
+                duration={500}
+            >
+                <Tooltip title="Return to top" arrow>
+                    <IconButton sx={styles.arrowUp}>
+                        <ArrowUpwardIcon />
+                    </IconButton>
+                </Tooltip>
+            </Link>
         </Box>
     )
 }

@@ -1,3 +1,6 @@
+// React scroll
+import { Element } from "react-scroll"
+// Components
 import Nav from './components/Nav'
 import Title from './components/Title'
 import AboutMe from './components/AboutMe'
@@ -8,12 +11,22 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-      <Nav />
+      <Element name="top">
+        <Nav />
+      </Element>
       <Title />
-      <AboutMe />
-      <Skills />
-      <Portfolio />
-      <Footer />
+      <Element name="aboutMe">
+        <AboutMe />
+      </Element>
+      <Element name="skills">
+        <Skills />
+      </Element>
+      <Element name="portfolio">
+        <Portfolio />
+      </Element>
+      <Element name="contact">
+        <Footer />
+      </Element>
     </>
   );
 }

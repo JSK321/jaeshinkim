@@ -1,4 +1,6 @@
 import React from 'react'
+// React Scroll
+import { Link } from 'react-scroll'
 // MUI Components
 import {
     Menu,
@@ -8,6 +10,7 @@ import {
 } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
+import './styles.css'
 
 const styles = {
     menuBox: css`   
@@ -38,46 +41,86 @@ export default function MenuNav(props) {
         >
             <MenuList sx={styles.menuBox}>
                 <MenuItem onClick={props.handleClose}>
-                    <Typography
-                        variant="p"
-                        component="p"
-                        sx={styles.menuItem}
+                    <Link
+                        activeClass="active"
+                        to="aboutMe"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        onClick={props.handleClose}
+                        className="scrollItem"
                     >
-                        01
-                    </Typography>
-                    About
+                        <Typography
+                            variant="p"
+                            component="p"
+                            sx={styles.menuItem}
+                        >
+                            01
+                        </Typography>
+                        About
+                    </Link>
                 </MenuItem>
                 <MenuItem onClick={props.handleClose}>
-                    <Typography
-                        variant="p"
-                        component="p"
-                        sx={styles.menuItem}
+                    <Link
+                        activeClass="active"
+                        to="skills"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        onClick={props.handleClose}
+                        className="scrollItem"
                     >
-                        02
-                    </Typography>
-                    Skills
+                        <Typography
+                            variant="p"
+                            component="p"
+                            sx={styles.menuItem}
+                        >
+                            02
+                        </Typography>
+                        Skills
+                    </Link>
                 </MenuItem>
                 <MenuItem onClick={props.handleClose}>
-                    <Typography
-                        variant="p"
-                        component="p"
-                        sx={styles.menuItem}
+                    <Link
+                        activeClass="active"
+                        to="portfolio"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        onClick={props.handleClose}
+                        className="scrollItem"
                     >
-                        03
-                    </Typography>
-                    Portfolio
+                        <Typography
+                            variant="p"
+                            component="p"
+                            sx={styles.menuItem}
+                        >
+                            03
+                        </Typography>
+                        Portfolio
+                    </Link>
                 </MenuItem>
                 <MenuItem onClick={props.handleClose}>
-                    <Typography
-                        variant="p"
-                        component="p"
-                        sx={styles.menuItem}
+                    <Link
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        onClick={props.handleClose}
+                        className="scrollItem"
                     >
-                        04
-                    </Typography>
-                    Contact
+                        <Typography
+                            variant="p"
+                            component="p"
+                            sx={styles.menuItem}
+                        >
+                            04
+                        </Typography>
+                        Contact
+                    </Link>
                 </MenuItem>
             </MenuList>
-        </Menu>
+        </Menu >
     )
 }
