@@ -18,7 +18,7 @@ const styles = {
   nav: css`
   background-color: transparent;
   box-shadow: none;
-  color: black;
+  color: #737373;
   `,
   content: css`
   display: flex;

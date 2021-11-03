@@ -25,12 +25,14 @@ const styles = {
     font-size: 24px;
     letter-spacing: 5px;
     user-select: none;
+    color:#A6A6A6;
   `,
   name: css`
     letter-spacing: 5px;
     margin-top: 1rem;
     font-weight: bold;
     user-select: none;
+    color:#737373;
   `,
 }
 

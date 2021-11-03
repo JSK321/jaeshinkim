@@ -41,6 +41,9 @@ const styles = {
     margin-top: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    background-color: #0D0D0D;
+    color: #A6A6A6;
+    box-shadow: none;
     `,
     cardTitle: css`
     font-weight: bold;
@@ -54,6 +57,10 @@ const styles = {
     `,
     iconButtons: css`
     margin-left: 1rem;
+    `,
+    projectDescription: css`
+    color: #737373;
+    font-size: 16px;
     `,
 }
 export default function ProjectsCard(props) {
@@ -93,6 +100,7 @@ export default function ProjectsCard(props) {
                         <Typography
                             variant="body2"
                             color="text.secondary"
+                            sx={styles.projectDescription}
                         >
                             {props.description}
                         </Typography>
@@ -107,6 +115,7 @@ export default function ProjectsCard(props) {
                         <Typography
                             variant="body2"
                             color="text.secondary"
+                            sx={styles.projectDescription}
                         >
                             {props.technologies}
                         </Typography>

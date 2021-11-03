@@ -18,6 +18,8 @@ const styles = {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #737373;
+    color: #0D0D0D
     `,
     menuItem: css`
     font-size: 12.5px;
@@ -25,6 +27,7 @@ const styles = {
     text-underline-offset: 0.25em;
     padding-right: 0.5rem;
     opacity: 0.5;
+    color: snow;
     `,
 }
 

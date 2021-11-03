@@ -16,6 +16,7 @@ const styles = {
     justify-content: center;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
+    color: #737373;
     `,
     secondaryTitle: css`
     letter-spacing: 4px;
@@ -24,6 +25,7 @@ const styles = {
     justify-content: center;
     padding-bottom: 1rem;
     opacity: 0.5;
+    color: #A6A6A6;
     `,
     skillsBox: css`
     display: block;
@@ -39,13 +41,16 @@ const styles = {
     skillsSection: css`
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #A6A6A6;
+    `,
+    skillsList: css`
+    color: #737373;
     `,
 }
 
 export default function Skills() {
     return (
         <FadeInSection>
-
             <Box sx={styles.skillsBox}>
                 <Typography
                     variant="h6"
@@ -73,18 +78,21 @@ export default function Skills() {
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             JavaScript
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             HTML
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             CSS
                         </Typography>
@@ -100,18 +108,21 @@ export default function Skills() {
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             React.js
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Handlebars
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             jQuery
                         </Typography>
@@ -127,30 +138,35 @@ export default function Skills() {
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Node.js
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Express.js
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             MUI
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Bootstrap
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Foundation
                         </Typography>
@@ -166,24 +182,28 @@ export default function Skills() {
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             MySQL
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             MongoDB
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             GitHub
                         </Typography>
                         <Typography
                             variant="h6"
                             component="h6"
+                            sx={styles.skillsList}
                         >
                             Heroku
                         </Typography>

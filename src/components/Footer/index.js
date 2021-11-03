@@ -26,12 +26,16 @@ const styles = {
     `,
     contactTitle: css`
     padding: 1.5rem;
+    color: #737373;
     `,
     copyright: css`
     padding: 4rem;
     `,
     arrowUp: css`
     margin: 4rem;
+    `,
+    email: css`
+    color: #A6A6A6;
     `,
 }
 
@@ -75,6 +79,7 @@ export default function Footer() {
                 <Typography
                     variant="h5"
                     component="div"
+                    sx={styles.email}
                 >
                     jaeshinkim321@gmail.com
                 </Typography>
@@ -87,7 +92,9 @@ export default function Footer() {
                 >
                     <Tooltip title="Return to top" arrow>
                         <IconButton sx={styles.arrowUp}>
-                            <ArrowUpwardIcon />
+                            <ArrowUpwardIcon 
+                                style={{color:'#A6A6A6'}}
+                            />
                         </IconButton>
                     </Tooltip>
                 </Link>

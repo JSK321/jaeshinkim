@@ -18,6 +18,7 @@ const styles = {
     justify-content: center;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
+    color: #737373;
     `,
     secondaryTitle: css`
     letter-spacing: 4px;
@@ -26,6 +27,7 @@ const styles = {
     justify-content: center;
     padding-bottom: 1rem;
     opacity: 0.5;
+    color: #A6A6A6;
     `,
     portfolioBox: css`
     display: block;
