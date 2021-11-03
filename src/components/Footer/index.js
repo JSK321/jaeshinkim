@@ -14,7 +14,6 @@ const styles = {
     flex-direction: column;
     align-items: center;
     padding: 7rem;
-    border: 1px solid pink;
     `,
     icons: css`
     font-size: 45px;

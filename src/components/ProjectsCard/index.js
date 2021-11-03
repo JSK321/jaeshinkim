@@ -9,6 +9,7 @@ import {
     CardContent,
     CardActions,
     Typography,
+    Tooltip,
 } from '@mui/material'
 // MUI Icons
 import WebIcon from '@mui/icons-material/Web';
@@ -104,12 +105,16 @@ export default function ProjectsCard(props) {
                     </Typography>
                 </CardContent>
                 <CardActions sx={styles.cardBtns}>
-                    <IconButton color="primary" sx={styles.iconButtons} onClick={handleLiveBtn}>
-                        <WebIcon style={{ fontSize: '35px' }} />
-                    </IconButton>
-                    <IconButton color="primary" sx={styles.iconButtons} onClick={handleGHBtn}>
-                        <GitHubIcon style={{ fontSize: '35px' }} />
-                    </IconButton>
+                    <Tooltip title="View website" arrow>
+                        <IconButton color="primary" sx={styles.iconButtons} onClick={handleLiveBtn}>
+                            <WebIcon style={{ fontSize: '35px' }} />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="View GitHub" arrow>
+                        <IconButton color="primary" sx={styles.iconButtons} onClick={handleGHBtn}>
+                            <GitHubIcon style={{ fontSize: '35px' }} />
+                        </IconButton>
+                    </Tooltip>
                 </CardActions>
             </Card>
         </Box >

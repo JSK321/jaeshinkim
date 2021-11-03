@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import MenuNav from '../Menu'
+// MUI Components
 import {
   AppBar,
   Box,
@@ -7,6 +9,7 @@ import {
   Avatar,
   Typography
 } from '@mui/material'
+// MUI Icons
 import MenuIcon from '@mui/icons-material/Menu';
 import { css } from '@emotion/react'
 import Picture from '../../utils/Images/me.jpg'
@@ -37,6 +40,16 @@ const styles = {
 }
 
 export default function ButtonAppBar() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const handleAvatarClick = event => {
     window.location.reload()
   }
@@ -51,7 +64,7 @@ export default function ButtonAppBar() {
             <Avatar
               alt='Jae Kim'
               src={Picture}
-              sx={{ width: 56, height: 56}}
+              sx={{ width: 56, height: 56 }}
             />
             <Typography variant="h5" component="div" sx={styles.name}>
               JAE KIM
@@ -60,11 +73,17 @@ export default function ButtonAppBar() {
           <IconButton
             color="inherit"
             aria-label="menu"
+            onClick={handleClick}
           >
             <MenuIcon sx={{ fontSize: 40 }} />
           </IconButton>
         </Toolbar>
       </AppBar>
+      <MenuNav
+        anchorEl={anchorEl}
+        open={open}
+        handleClose={handleClose}
+      />
     </Box>
   );
 }

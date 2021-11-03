@@ -12,7 +12,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 const styles = {
     box: css`
-    border: 1px solid pink;
     padding-top: 7rem;
     padding-bottom: 7rem;
     `,

@@ -129,6 +129,12 @@ export default function Skills() {
                     >
                         Bootstrap
                     </Typography>
+                    <Typography
+                        variant="h6"
+                        component="h6"
+                    >
+                        Foundation
+                    </Typography>
                 </Grid>
                 <Grid item xs={3} sx={styles.skills}>
                     <Typography
