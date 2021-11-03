@@ -21,6 +21,7 @@ const styles = {
     text-decoration: underline;
     text-underline-offset: 0.25em;
     padding-right: 0.5rem;
+    opacity: 0.5;
     `,
 }
 
