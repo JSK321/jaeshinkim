@@ -1,6 +1,8 @@
 import React from 'react'
+// // Components
+import FadeInSection from '../FadeInSection'
 // MUI
-import { Box, Typography,} from '@mui/material'
+import { Box, Typography, } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 // react swipeable views
@@ -34,46 +36,48 @@ const styles = {
 
 export default function Title() {
   return (
-    <Box sx={styles.title}>
-      <AutoPlaySwipeableViews
-        interval={4000}
-        enableMouseEvents={true}
-      >
-        <div>
-          <Typography
-            variant="p"
-            component="p"
-            sx={styles.greetings}
-          >
-            HELLO! I'M
-          </Typography>
+    <FadeInSection>
+      <Box sx={styles.title}>
+        <AutoPlaySwipeableViews
+          interval={4000}
+          enableMouseEvents={true}
+        >
+          <div>
+            <Typography
+              variant="p"
+              component="p"
+              sx={styles.greetings}
+            >
+              HELLO! I'M
+            </Typography>
 
-          <Typography
-            variant="h3"
-            component="h3"
-            sx={styles.name}
-          >
-            JAE KIM
-          </Typography>
-        </div>
-        <div>
-          <Typography
-            variant="p"
-            component="p"
-            sx={styles.greetings}
-          >
-            I'M A FULL STACK
-          </Typography>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={styles.name}
+            >
+              JAE KIM
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              variant="p"
+              component="p"
+              sx={styles.greetings}
+            >
+              I'M A FULL STACK
+            </Typography>
 
-          <Typography
-            variant="h3"
-            component="h3"
-            sx={styles.name}
-          >
-            WEB DEVELOPER
-          </Typography>
-        </div>
-      </AutoPlaySwipeableViews>
-    </Box>
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={styles.name}
+            >
+              WEB DEVELOPER
+            </Typography>
+          </div>
+        </AutoPlaySwipeableViews>
+      </Box>
+    </FadeInSection> 
   )
 }

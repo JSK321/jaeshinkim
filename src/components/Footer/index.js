@@ -1,4 +1,6 @@
 import React from 'react'
+// Components
+import FadeInSection from '../FadeInSection'
 // React Scroll
 import { Link } from 'react-scroll'
 // MUI
@@ -43,51 +45,53 @@ export default function Footer() {
     }
 
     return (
-        <Box sx={styles.footer}>
-            <Box>
-                <IconButton
-                    color="primary"
-                    onClick={handleLIBtn}
-                >
-                    <LinkedInIcon
-                        sx={styles.icons}
-                    />
-                </IconButton>
-                <IconButton
-                    color="primary"
-                    onClick={handleGHBtn}
-                >
-                    <GitHubIcon
-                        sx={styles.icons}
-                    />
-                </IconButton>
-            </Box>
-            <Typography
-                variant="h4"
-                component="div"
-                sx={styles.contactTitle}
-            >
-                Contact Me
-            </Typography>
-            <Typography
-                variant="h5"
-                component="div"
-            >
-                jaeshinkim321@gmail.com
-            </Typography>
-            <Link
-                activeClass="active"
-                to="top"
-                spy={true}
-                smooth={true}
-                duration={500}
-            >
-                <Tooltip title="Return to top" arrow>
-                    <IconButton sx={styles.arrowUp}>
-                        <ArrowUpwardIcon />
+        <FadeInSection>
+            <Box sx={styles.footer}>
+                <Box>
+                    <IconButton
+                        color="primary"
+                        onClick={handleLIBtn}
+                    >
+                        <LinkedInIcon
+                            sx={styles.icons}
+                        />
                     </IconButton>
-                </Tooltip>
-            </Link>
-        </Box>
+                    <IconButton
+                        color="primary"
+                        onClick={handleGHBtn}
+                    >
+                        <GitHubIcon
+                            sx={styles.icons}
+                        />
+                    </IconButton>
+                </Box>
+                <Typography
+                    variant="h4"
+                    component="div"
+                    sx={styles.contactTitle}
+                >
+                    Contact Me
+                </Typography>
+                <Typography
+                    variant="h5"
+                    component="div"
+                >
+                    jaeshinkim321@gmail.com
+                </Typography>
+                <Link
+                    activeClass="active"
+                    to="top"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                >
+                    <Tooltip title="Return to top" arrow>
+                        <IconButton sx={styles.arrowUp}>
+                            <ArrowUpwardIcon />
+                        </IconButton>
+                    </Tooltip>
+                </Link>
+            </Box>
+        </FadeInSection>
     )
 }

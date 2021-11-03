@@ -1,4 +1,6 @@
 import React from 'react'
+// Components
+import FadeInSection from '../FadeInSection'
 // MUI
 import {
     Box,
@@ -64,63 +66,65 @@ export default function ProjectsCard(props) {
     }
 
     return (
-        <Box
-            sx={props.id % 2 === 0 ? styles.cardBox1 : styles.cardBox2}
-        >
-            <CardActionArea sx={styles.cardPicDiv} onClick={handleLiveBtn}>
-                <Card>
-                    <CardMedia
-                        component="img"
-                        sx={styles.projectPic}
-                        image={props.image}
-                        alt="project picture"
-                    ></CardMedia>
+        <FadeInSection>
+            <Box
+                sx={props.id % 2 === 0 ? styles.cardBox1 : styles.cardBox2}
+            >
+                <CardActionArea sx={styles.cardPicDiv} onClick={handleLiveBtn}>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            sx={styles.projectPic}
+                            image={props.image}
+                            alt="project picture"
+                        ></CardMedia>
+                    </Card>
+                </CardActionArea>
+                <Card sx={styles.cardDiv}>
+                    <CardContent>
+                        <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            sx={styles.cardTitle}
+                        >
+                            {props.name}
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                        >
+                            {props.description}
+                        </Typography>
+                        <br></br>
+                        <Typography
+                            gutterBottom
+                            variant="h6"
+                            component="div"
+                        >
+                            Technology
+                        </Typography>
+                        <Typography
+                            variant="body2"
+                            color="text.secondary"
+                        >
+                            {props.technologies}
+                        </Typography>
+                    </CardContent>
+                    <CardActions sx={styles.cardBtns}>
+                        <Tooltip title="View website" arrow>
+                            <IconButton color="primary" sx={styles.iconButtons} onClick={handleLiveBtn}>
+                                <WebIcon style={{ fontSize: '35px' }} />
+                            </IconButton>
+                        </Tooltip>
+                        <Tooltip title="View GitHub" arrow>
+                            <IconButton color="primary" sx={styles.iconButtons} onClick={handleGHBtn}>
+                                <GitHubIcon style={{ fontSize: '35px' }} />
+                            </IconButton>
+                        </Tooltip>
+                    </CardActions>
                 </Card>
-            </CardActionArea>
-            <Card sx={styles.cardDiv}>
-                <CardContent>
-                    <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="div"
-                        sx={styles.cardTitle}
-                    >
-                        {props.name}
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        {props.description}
-                    </Typography>
-                    <br></br>
-                    <Typography
-                        gutterBottom
-                        variant="h6"
-                        component="div"
-                    >
-                        Technology
-                    </Typography>
-                    <Typography
-                        variant="body2"
-                        color="text.secondary"
-                    >
-                        {props.technologies}
-                    </Typography>
-                </CardContent>
-                <CardActions sx={styles.cardBtns}>
-                    <Tooltip title="View website" arrow>
-                        <IconButton color="primary" sx={styles.iconButtons} onClick={handleLiveBtn}>
-                            <WebIcon style={{ fontSize: '35px' }} />
-                        </IconButton>
-                    </Tooltip>
-                    <Tooltip title="View GitHub" arrow>
-                        <IconButton color="primary" sx={styles.iconButtons} onClick={handleGHBtn}>
-                            <GitHubIcon style={{ fontSize: '35px' }} />
-                        </IconButton>
-                    </Tooltip>
-                </CardActions>
-            </Card>
-        </Box >
+            </Box >
+        </FadeInSection>
     )
 }
