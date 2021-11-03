@@ -1,9 +1,7 @@
 import React from 'react'
 // MUI
 import {
-    Grid,
     Box,
-    Button,
     IconButton,
     Card,
     CardActionArea,
@@ -19,10 +17,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { css } from '@emotion/react'
 
 const styles = {
-    cardBox: css`
+    cardBox1: css`
     padding: 2rem;
     display: flex;
     justify-content: center;
+    flex-direction: row-reverse;
+    `,
+    cardBox2: css`
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     `,
     cardPicDiv: css`
     width: 425px;
@@ -46,12 +51,6 @@ const styles = {
     `,
 }
 export default function ProjectsCard(props) {
-    if (props.id % 2 === 0) {
-        console.log('even')
-    } else {
-        console.log('odd')
-    }
-
     const handleLiveBtn = event => {
         window.open(props.link, '_blank').focus()
     }
@@ -61,7 +60,9 @@ export default function ProjectsCard(props) {
     }
 
     return (
-        <Box sx={styles.cardBox} id={`card${props.id}`}>
+        <Box
+            sx={props.id % 2 === 0 ? styles.cardBox1 : styles.cardBox2}
+        >
             <CardActionArea sx={styles.cardPicDiv} onClick={handleLiveBtn}>
                 <Card>
                     <CardMedia

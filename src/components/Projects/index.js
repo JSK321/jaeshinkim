@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Projects from '../../projects.json'
 import ProjectsCard from '../ProjectsCard'
 // MUI
@@ -21,7 +21,6 @@ const styles = {
         padding: 7rem;
     `,
     card: css`
-    display: flex;
     `,
 }
 

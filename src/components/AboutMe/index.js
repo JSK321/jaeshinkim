@@ -23,9 +23,30 @@ const styles = {
     icons: css`
     font-size: 45px;
     `,
+    resume: css`
+    font-size: 18px;
+    line-height: 1.8;
+    margin-left: 4.6rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    `,
 }
 
 export default function AboutMe() {
+    const handleResumeBtn = event => {
+        window.open(
+            `https://docs.google.com/document/d/14tQljuyZufhgLDpHjVz9Lp3D3-OV7fbjQKA-8Inv-KM/edit?usp=sharing`, 
+            '_blank').focus()
+    }
+
+    const handleLIBtn = event => {
+        window.open('https://www.linkedin.com/in/jsk321/', '_blank').focus()
+    }
+
+    const handleGHBtn = event => {
+        window.open('https://github.com/JSK321', '_blank').focus()
+    }
+
     return (
         <Box sx={styles.box}>
             <Grid container spacing={2}>
@@ -63,17 +84,20 @@ export default function AboutMe() {
                             I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
                         </Typography>
 
-                        <Typography
-                            variant="p"
-                            component="p"
-                            className="resume"
+
+                        <Button
+                            variant="text"
+                            sx={styles.resume}
+                            onClick={handleResumeBtn}
                         >
                             Check out my resume
-                        </Typography>
+                        </Button>
+
 
                         <Box className="iconBtns">
                             <IconButton
                                 color="primary"
+                                onClick={handleLIBtn}
                             >
                                 <LinkedInIcon
                                     sx={styles.icons}
@@ -81,6 +105,7 @@ export default function AboutMe() {
                             </IconButton>
                             <IconButton
                                 color="primary"
+                                onClick={handleGHBtn}
                             >
                                 <GitHubIcon
                                     sx={styles.icons}
@@ -91,7 +116,7 @@ export default function AboutMe() {
                             <Typography
                                 variant="p"
                                 component="p"
-                                className="resume"
+                                className="contact"
                             >
                                 Contact me here!
                             </Typography>
@@ -107,7 +132,7 @@ export default function AboutMe() {
                                 component="p"
                                 className="contactInfo"
                             >
-                                Phone: (253) 292-7744
+                                Phone: (253)-292-7744
                             </Typography>
                         </Box>
                     </div>
