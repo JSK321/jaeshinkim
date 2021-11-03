@@ -40,8 +40,11 @@ const styles = {
     margin-left: 3rem;
     margin-right: 3rem;
     `,
+    cardTitle: css`
+    font-weight: bold;
+    `,
     cardBtns: css`
-        margin-top: 1rem;
+    margin-top: 1rem;
     `,
     projectPic: css`
     width: 425px;    
@@ -80,6 +83,7 @@ export default function ProjectsCard(props) {
                         gutterBottom
                         variant="h5"
                         component="div"
+                        sx={styles.cardTitle}
                     >
                         {props.name}
                     </Typography>

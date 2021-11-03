@@ -8,19 +8,25 @@ import { css } from '@emotion/react'
 
 const styles = {
     title: css`
-        font-weight: bold;
-        letter-spacing: 4px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 3rem;
-        padding-bottom: 3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    `,
+    secondaryTitle: css`
+    letter-spacing: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    opacity: 0.5;
     `,
     portfolioBox: css`
-        display: block;
-        padding: 7rem;
-    `,
-    card: css`
+    display: block;
+    padding: 7rem;
     `,
 }
 
@@ -29,6 +35,13 @@ const portfolio = Projects
 export default function Portfolio() {
     return (
         <Box sx={styles.portfolioBox}>
+            <Typography
+                variant="h6"
+                component="h6"
+                sx={styles.secondaryTitle}
+            >
+                CHECKOUT MY WORK
+            </Typography>
             <Typography
                 variant="h3"
                 component="h3"

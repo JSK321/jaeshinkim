@@ -7,34 +7,49 @@ import './styles.css'
 
 const styles = {
     title: css`
-        font-weight: bold;
-        letter-spacing: 4px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 3rem;
-        padding-bottom: 3rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    `,
+    secondaryTitle: css`
+    letter-spacing: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    opacity: 0.5;
     `,
     skillsBox: css`
-        display: block;
-        padding: 7rem;
+    display: block;
+    padding: 7rem;
     `,
     skills: css`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1.8;
-        line-height: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.8;
+    line-height: 5px;
     `,
     skillsSection: css`
-        font-weight: bold;
-        margin-bottom: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
     `,
 }
 
 export default function Skills() {
     return (
         <Box sx={styles.skillsBox}>
+            <Typography
+                variant="h6"
+                component="h6"
+                sx={styles.secondaryTitle}
+            >
+                WHAT I DO
+            </Typography>
             <Typography
                 variant="h3"
                 component="h3"
