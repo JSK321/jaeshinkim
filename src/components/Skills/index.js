@@ -30,6 +30,9 @@ const styles = {
     skillsBox: css`
     display: block;
     padding: 7rem;
+    @media (max-width: 400px) {
+        padding: 4rem;
+    }
     `,
     skills: css`
     display: flex;
@@ -67,7 +70,7 @@ export default function Skills() {
                     SKILLS
                 </Typography>
                 <Grid container spacing={1}>
-                    <Grid item xs={3} sx={styles.skills}>
+                    <Grid item xs={12} sm={3} md={3} sx={styles.skills}>
                         <Typography
                             variant="h5"
                             component="h5"
@@ -97,7 +100,7 @@ export default function Skills() {
                             CSS
                         </Typography>
                     </Grid>
-                    <Grid item xs={3} sx={styles.skills}>
+                    <Grid item xs={12} sm={3} md={3} sx={styles.skills}>
                         <Typography
                             variant="h5"
                             component="h5"
@@ -127,7 +130,7 @@ export default function Skills() {
                             jQuery
                         </Typography>
                     </Grid>
-                    <Grid item xs={3} sx={styles.skills}>
+                    <Grid item xs={12} sm={3} md={3} sx={styles.skills}>
                         <Typography
                             variant="h5"
                             component="h5"
@@ -171,7 +174,7 @@ export default function Skills() {
                             Foundation
                         </Typography>
                     </Grid>
-                    <Grid item xs={3} sx={styles.skills}>
+                    <Grid item xs={12} sm={3} md={3} sx={styles.skills}>
                         <Typography
                             variant="h5"
                             component="h5"
