@@ -20,6 +20,10 @@ const styles = {
     align-items: center;
     padding: 7rem;
     padding-bottom: 0;
+    @media (max-width: 400px) {
+        padding: 4rem;
+        padding-bottom: 0;
+    }
     `,
     icons: css`
     font-size: 45px;
@@ -33,6 +37,9 @@ const styles = {
     `,
     arrowUp: css`
     margin: 4rem;
+    @media (max-width: 400px) {
+        margin-bottom: 2rem;
+    }
     `,
     email: css`
     color: #A6A6A6;

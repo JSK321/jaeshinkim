@@ -25,15 +25,26 @@ const styles = {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
+    @media (max-width: 400px) {
+        flex-direction: column;
+        padding: 0;
+    }
     `,
     cardBox2: css`
     padding: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    @media (max-width: 400px) {
+        flex-direction: column;
+        padding: 0;
+    }
     `,
     cardPicDiv: css`
     width: 425px;
+    @media (max-width: 400px) {
+        width: 100%;
+    }
     `,
     cardDiv: css`
     width: 425px;
@@ -44,19 +55,34 @@ const styles = {
     background-color: #0D0D0D;
     color: #A6A6A6;
     box-shadow: none;
+    @media (max-width: 400px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
     `,
     cardTitle: css`
     font-weight: bold;
     `,
     cardBtns: css`
     margin-top: 1rem;
+    @media (max-width: 400px) {
+        justify-content: center;
+    }
     `,
     projectPic: css`
     width: 425px;    
     height: 450px;
+    @media (max-width: 400px) {
+        width: 375px;
+        height: 350px;
+    }
     `,
     iconButtons: css`
     margin-left: 1rem;
+    @media (max-width: 400px) {
+        margin-left: 0;
+    }
     `,
     projectDescription: css`
     color: #737373;

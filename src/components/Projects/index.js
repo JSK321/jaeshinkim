@@ -32,6 +32,9 @@ const styles = {
     portfolioBox: css`
     display: block;
     padding: 7rem;
+    @media (max-width: 400px) {
+        padding: 0;
+    }
     `,
 }
 
@@ -56,18 +59,16 @@ export default function Portfolio() {
                     PORTFOLIO
                 </Typography>
                 {portfolio.map((projectObj) => (
-                    <Box sx={styles.card}>
-                        <ProjectsCard
-                            key={projectObj.id}
-                            id={projectObj.id}
-                            name={projectObj.name}
-                            image={projectObj.image}
-                            github={projectObj.github}
-                            link={projectObj.link}
-                            description={projectObj.description}
-                            technologies={projectObj.technologies}
-                        />
-                    </Box>
+                    <ProjectsCard
+                        key={projectObj.id}
+                        id={projectObj.id}
+                        name={projectObj.name}
+                        image={projectObj.image}
+                        github={projectObj.github}
+                        link={projectObj.link}
+                        description={projectObj.description}
+                        technologies={projectObj.technologies}
+                    />
                 ))}
             </Box>
         </FadeInSection>
