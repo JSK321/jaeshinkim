@@ -24,12 +24,30 @@ const styles = {
     icons: css`
     font-size: 45px;
     `,
+    resumeBox: css`
+    width: 100%;
+    @media (max-width: 400px) {
+        display: flex;
+        justify-content: center;
+    }
+    `,
     resume: css`
     font-size: 18px;
     line-height: 1.8;
     margin-left: 4.6rem;
     padding-top: 0;
     padding-bottom: 0;
+    @media (max-width: 400px) {
+        margin-left: 0;
+    }
+    `,
+    iconBtns: css`
+    margin-left: 4.5rem;
+    @media (max-width: 400px) {
+        margin-left: 0;
+        display: flex;
+        justify-content:center;
+    }
     `,
 }
 
@@ -86,17 +104,17 @@ export default function AboutMe() {
                                 I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
                             </Typography>
 
+                            <Box sx={styles.resumeBox}>
+                                <Button
+                                    variant="text"
+                                    sx={styles.resume}
+                                    onClick={handleResumeBtn}
+                                >
+                                    Check out my resume
+                                </Button>
+                            </Box>
 
-                            <Button
-                                variant="text"
-                                sx={styles.resume}
-                                onClick={handleResumeBtn}
-                            >
-                                Check out my resume
-                            </Button>
-
-
-                            <Box className="iconBtns">
+                            <Box sx={styles.iconBtns}>
                                 <IconButton
                                     color="primary"
                                     onClick={handleLIBtn}
