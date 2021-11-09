@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jaeshinkim/static/css/main.57117c18.chunk.css",
+    "main.js": "/jaeshinkim/static/js/main.c3acc270.chunk.js",
+    "main.js.map": "/jaeshinkim/static/js/main.c3acc270.chunk.js.map",
+    "runtime-main.js": "/jaeshinkim/static/js/runtime-main.b5392cac.js",
+    "runtime-main.js.map": "/jaeshinkim/static/js/runtime-main.b5392cac.js.map",
+    "static/js/2.316aeea6.chunk.js": "/jaeshinkim/static/js/2.316aeea6.chunk.js",
+    "static/js/2.316aeea6.chunk.js.map": "/jaeshinkim/static/js/2.316aeea6.chunk.js.map",
+    "index.html": "/jaeshinkim/index.html",
+    "static/css/main.57117c18.chunk.css.map": "/jaeshinkim/static/css/main.57117c18.chunk.css.map",
+    "static/js/2.316aeea6.chunk.js.LICENSE.txt": "/jaeshinkim/static/js/2.316aeea6.chunk.js.LICENSE.txt",
+    "static/media/me.92b5f959.jpg": "/jaeshinkim/static/media/me.92b5f959.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5392cac.js",
+    "static/js/2.316aeea6.chunk.js",
+    "static/css/main.57117c18.chunk.css",
+    "static/js/main.c3acc270.chunk.js"
+  ]
+}
