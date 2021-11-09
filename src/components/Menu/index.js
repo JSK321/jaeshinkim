@@ -19,7 +19,7 @@ const styles = {
     flex-direction: column;
     align-items: center;
     background-color: #737373;
-    color: #0D0D0D
+    color: #0D0D0D;
     `,
     menuItem: css`
     font-size: 12.5px;
