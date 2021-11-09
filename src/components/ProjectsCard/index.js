@@ -25,9 +25,10 @@ const styles = {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    @media (max-width: 400px) {
+    @media (max-width: 775px) {
+        align-items: center;
         flex-direction: column;
-        padding: 0;
+        padding: 1rem;
     }
     `,
     cardBox2: css`
@@ -35,15 +36,16 @@ const styles = {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    @media (max-width: 400px) {
+    @media (max-width: 775px) {
+        align-items: center;
         flex-direction: column;
-        padding: 0;
+        padding: 1rem;
     }
     `,
     cardPicDiv: css`
     width: 425px;
-    @media (max-width: 400px) {
-        width: 100%;
+    @media (max-width: 815px) {
+        width: 350px;
     }
     `,
     cardDiv: css`
@@ -55,9 +57,13 @@ const styles = {
     background-color: #0D0D0D;
     color: #A6A6A6;
     box-shadow: none;
+    border: none;
+    @media (max-width: 815px) {
+        margin: 0;
+    }
     @media (max-width: 400px) {
         width: 100%;
-        margin: 0;
+        height: 100vh;
         margin-bottom: 3rem;
     }
     `,
@@ -68,15 +74,19 @@ const styles = {
     margin-top: 1rem;
     @media (max-width: 400px) {
         justify-content: center;
+        margin: 0;
     }
     `,
     projectPic: css`
     width: 425px;    
     height: 450px;
-    @media (max-width: 400px) {
-        width: 375px;
+    @media (max-width: 975px) {
+        width: 100%;
         height: 350px;
     }
+    @media (max-width: 815px) {
+        width: 350px;
+    }    
     `,
     iconButtons: css`
     margin-left: 1rem;

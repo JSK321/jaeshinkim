@@ -2,7 +2,7 @@ import React from 'react'
 // Components
 import FadeInSection from '../FadeInSection'
 // MUI
-import { Box, Grid, Typography, IconButton, Button } from '@mui/material'
+import { Container, Box, Grid, Typography, IconButton, Button } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 import './styles.css'
@@ -16,10 +16,15 @@ const styles = {
     box: css`
     padding-top: 7rem;
     padding-bottom: 7rem;
+    display: flex;
+    @media (max-width:815px) {
+        flex-direction: column;
+        align-items: center;
+    }
     `,
     pic: css`
-    display: flex;
-    justify-content: flex-end;
+    // display: flex;
+    // justify-content: flex-end;
     `,
     icons: css`
     font-size: 45px;
@@ -37,13 +42,13 @@ const styles = {
     margin-left: 4.6rem;
     padding-top: 0;
     padding-bottom: 0;
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         margin-left: 0;
     }
     `,
     iconBtns: css`
     margin-left: 4.5rem;
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         margin-left: 0;
         display: flex;
         justify-content:center;
@@ -68,97 +73,186 @@ export default function AboutMe() {
 
     return (
         <FadeInSection>
-            <Box sx={styles.box}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}
-                        sx={styles.pic}
+            <Container sx={styles.box}>
+                <Box sx={styles.pic}>
+                    <img
+                        src={Picture}
+                        alt="profile picture"
+                        className="profilePic"
+                    />
+                </Box>
+                <Box className="aboutMeInfo">
+                    <h1
+                        className="aboutTitle"
                     >
-                        <img
-                            src={Picture}
-                            alt="profile picture"
-                            className="profilePic"
-                        />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <h1
-                            className="aboutTitle"
+                        About
+                    </h1>
+                    <Typography
+                        variant="h4"
+                        component="h4"
+                        className="aboutMeName"
+                    >
+                        Hi! I'm Jae Kim
+                    </Typography>
+
+                    <Typography
+                        variant="p"
+                        component="p"
+                        className="aboutMe"
+                    >
+                        I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
+                        I still have much to learn and I am always willing to develop new traits.
+                        I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
+                    </Typography>
+
+                    <Box sx={styles.resumeBox}>
+                        <Button
+                            variant="text"
+                            sx={styles.resume}
+                            onClick={handleResumeBtn}
                         >
-                            About
-                        </h1>
-                        <div className="aboutMeInfo">
-                            <Typography
-                                variant="h4"
-                                component="h4"
-                                className="aboutMeName"
-                            >
-                                Hi! I'm Jae Kim
-                            </Typography>
+                            Check out my resume
+                        </Button>
+                    </Box>
 
-                            <Typography
-                                variant="p"
-                                component="p"
-                                className="aboutMe"
-                            >
-                                I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
-                                I still have much to learn and I am always willing to develop new traits.
-                                I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
-                            </Typography>
-
-                            <Box sx={styles.resumeBox}>
-                                <Button
-                                    variant="text"
-                                    sx={styles.resume}
-                                    onClick={handleResumeBtn}
-                                >
-                                    Check out my resume
-                                </Button>
-                            </Box>
-
-                            <Box sx={styles.iconBtns}>
-                                <IconButton
-                                    color="primary"
-                                    onClick={handleLIBtn}
-                                >
-                                    <LinkedInIcon
-                                        sx={styles.icons}
-                                    />
-                                </IconButton>
-                                <IconButton
-                                    color="primary"
-                                    onClick={handleGHBtn}
-                                >
-                                    <GitHubIcon
-                                        sx={styles.icons}
-                                    />
-                                </IconButton>
-                            </Box>
-                            <Box>
-                                <Typography
-                                    variant="p"
-                                    component="p"
-                                    className="contact"
-                                >
-                                    Contact me here!
-                                </Typography>
-                                <Typography
-                                    variant="p"
-                                    component="p"
-                                    className="contactInfo"
-                                >
-                                    Email: jaeshinkim321@gmail.com
-                                </Typography>
-                                <Typography
-                                    variant="p"
-                                    component="p"
-                                    className="contactInfo"
-                                >
-                                    Phone: (253)-292-7744
-                                </Typography>
-                            </Box>
-                        </div>
-                    </Grid>
-                </Grid>
-            </Box>
+                    <Box sx={styles.iconBtns}>
+                        <IconButton
+                            color="primary"
+                            onClick={handleLIBtn}
+                        >
+                            <LinkedInIcon
+                                sx={styles.icons}
+                            />
+                        </IconButton>
+                        <IconButton
+                            color="primary"
+                            onClick={handleGHBtn}
+                        >
+                            <GitHubIcon
+                                sx={styles.icons}
+                            />
+                        </IconButton>
+                    </Box>
+                    <Box>
+                        <Typography
+                            variant="p"
+                            component="p"
+                            className="contact"
+                        >
+                            Contact me here!
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            component="p"
+                            className="contactInfo"
+                        >
+                            Email: jaeshinkim321@gmail.com
+                        </Typography>
+                        <Typography
+                            variant="p"
+                            component="p"
+                            className="contactInfo"
+                        >
+                            Phone: (253)-292-7744
+                        </Typography>
+                    </Box>
+                </Box>
+            </Container>
         </FadeInSection>
     )
 }
+
+
+{/* <FadeInSection>
+<Box sx={styles.box}>
+    <Grid container spacing={2}>
+        <Grid item xs={12} sm={6}
+            sx={styles.pic}
+        >
+            <img
+                src={Picture}
+                alt="profile picture"
+                className="profilePic"
+            />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+            <h1
+                className="aboutTitle"
+            >
+                About
+            </h1>
+            <div className="aboutMeInfo">
+                <Typography
+                    variant="h4"
+                    component="h4"
+                    className="aboutMeName"
+                >
+                    Hi! I'm Jae Kim
+                </Typography>
+
+                <Typography
+                    variant="p"
+                    component="p"
+                    className="aboutMe"
+                >
+                    I am a graduate of University of Washington Coding Bootcamp where I developed skills in JavaScript, React.js, Node.js, Express.js, and MySQL.
+                    I still have much to learn and I am always willing to develop new traits.
+                    I have worked in the service industry for many years, and it has taught me to give my best effort into a task to achieve the most satisfying result.
+                </Typography>
+
+                <Box sx={styles.resumeBox}>
+                    <Button
+                        variant="text"
+                        sx={styles.resume}
+                        onClick={handleResumeBtn}
+                    >
+                        Check out my resume
+                    </Button>
+                </Box>
+
+                <Box sx={styles.iconBtns}>
+                    <IconButton
+                        color="primary"
+                        onClick={handleLIBtn}
+                    >
+                        <LinkedInIcon
+                            sx={styles.icons}
+                        />
+                    </IconButton>
+                    <IconButton
+                        color="primary"
+                        onClick={handleGHBtn}
+                    >
+                        <GitHubIcon
+                            sx={styles.icons}
+                        />
+                    </IconButton>
+                </Box>
+                <Box>
+                    <Typography
+                        variant="p"
+                        component="p"
+                        className="contact"
+                    >
+                        Contact me here!
+                    </Typography>
+                    <Typography
+                        variant="p"
+                        component="p"
+                        className="contactInfo"
+                    >
+                        Email: jaeshinkim321@gmail.com
+                    </Typography>
+                    <Typography
+                        variant="p"
+                        component="p"
+                        className="contactInfo"
+                    >
+                        Phone: (253)-292-7744
+                    </Typography>
+                </Box>
+            </div>
+        </Grid>
+    </Grid>
+</Box>
+</FadeInSection> */}

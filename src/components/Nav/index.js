@@ -23,6 +23,9 @@ const styles = {
   content: css`
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 300px) {
+    width: 99%;
+  }
   `,
   avatar: css`
   display: flex;

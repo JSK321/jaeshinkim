@@ -2,7 +2,7 @@ import React from 'react'
 // // Components
 import FadeInSection from '../FadeInSection'
 // MUI
-import { Box, Grid, Typography, } from '@mui/material'
+import { Container, Grid, Typography, } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 import './styles.css'
@@ -26,6 +26,9 @@ const styles = {
     padding-bottom: 1rem;
     opacity: 0.5;
     color: #A6A6A6;
+    @media (max-width: 300px) {
+        letter-spacing: 2px;
+    }
     `,
     skillsBox: css`
     display: block;
@@ -54,7 +57,7 @@ const styles = {
 export default function Skills() {
     return (
         <FadeInSection>
-            <Box sx={styles.skillsBox}>
+            <Container sx={styles.skillsBox}>
                 <Typography
                     variant="h6"
                     component="h6"
@@ -212,7 +215,7 @@ export default function Skills() {
                         </Typography>
                     </Grid>
                 </Grid>
-            </Box>
+            </Container >
         </FadeInSection>
     )
 }

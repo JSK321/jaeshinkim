@@ -4,7 +4,7 @@ import FadeInSection from '../FadeInSection'
 // React Scroll
 import { Link } from 'react-scroll'
 // MUI
-import { Box, Typography, IconButton, Tooltip } from '@mui/material'
+import { Container, Box, Typography, IconButton, Tooltip } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 // MUI Icons
@@ -31,6 +31,12 @@ const styles = {
     contactTitle: css`
     padding: 1.5rem;
     color: #737373;
+    @media (max-width: 400px){
+        padding: 0.5rem;
+    }
+    @media (max-width: 300px) {
+        font-size: 23px;
+    }
     `,
     copyright: css`
     padding: 4rem;
@@ -43,6 +49,9 @@ const styles = {
     `,
     email: css`
     color: #A6A6A6;
+    @media (max-width: 300px) {
+        font-size: 23px;
+    }
     `,
 }
 
@@ -57,7 +66,7 @@ export default function Footer() {
 
     return (
         <FadeInSection>
-            <Box sx={styles.footer}>
+            <Container sx={styles.footer}>
                 <Box>
                     <IconButton
                         color="primary"
@@ -77,7 +86,7 @@ export default function Footer() {
                     </IconButton>
                 </Box>
                 <Typography
-                    variant="h4"
+                    variant="h5"
                     component="div"
                     sx={styles.contactTitle}
                 >
@@ -105,7 +114,7 @@ export default function Footer() {
                         </IconButton>
                     </Tooltip>
                 </Link>
-            </Box>
+            </Container>
         </FadeInSection>
     )
 }

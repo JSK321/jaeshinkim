@@ -9,8 +9,8 @@ body {
 }
 
 .profilePic {
-    width: 450px;
-    height: 550px;
+    width: 400px;
+    height: 500px;
 }
 
 .aboutTitle {
@@ -21,6 +21,7 @@ body {
     color: #737373;
     text-transform: uppercase;
     margin: 0;
+    padding-left: 1rem;
     user-select: none;
 }
 
@@ -65,8 +66,28 @@ body {
         width: 100%
     }
 }
+@media screen and (max-width: 1155px) {
+    .aboutTitle {
+        font-size: 7rem;
+        transform: translateY(25px)
+    }
+    .profilePic {
+        width: 350px;
+        height: 450px;
+    }
+}
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 815px) {
+    .aboutTitle {
+        visibility: hidden;
+    }
+    .aboutMeName {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px){
     .profilePic {
         width: 100%;
         height: 450px;
@@ -77,7 +98,7 @@ body {
     }
 
     .aboutMeName {
-        padding: 1.5rem;
+        padding: 0;
     }
 
     .aboutMe {

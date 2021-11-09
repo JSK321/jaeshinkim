@@ -5,7 +5,7 @@ import Projects from '../../projects.json'
 import FadeInSection from '../FadeInSection'
 import ProjectsCard from '../ProjectsCard'
 // MUI
-import { Box, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 // styles
 import { css } from '@emotion/react'
 
@@ -19,6 +19,9 @@ const styles = {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
     color: #737373;
+    @media (max-width: 300px) {
+        font-size: 40px;
+    }
     `,
     secondaryTitle: css`
     letter-spacing: 4px;
@@ -32,7 +35,7 @@ const styles = {
     portfolioBox: css`
     display: block;
     padding: 7rem;
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         padding: 0;
     }
     `,
@@ -43,13 +46,13 @@ const portfolio = Projects
 export default function Portfolio() {
     return (
         <FadeInSection>
-            <Box sx={styles.portfolioBox}>
+            <Container sx={styles.portfolioBox}>
                 <Typography
                     variant="h6"
                     component="h6"
                     sx={styles.secondaryTitle}
                 >
-                    CHECKOUT MY WORK
+                    CHECK MY WORK
                 </Typography>
                 <Typography
                     variant="h3"
@@ -70,7 +73,7 @@ export default function Portfolio() {
                         technologies={projectObj.technologies}
                     />
                 ))}
-            </Box>
+            </Container>
         </FadeInSection>
     )
 }

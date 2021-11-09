@@ -33,6 +33,12 @@ const styles = {
     font-weight: bold;
     user-select: none;
     color:#737373;
+    @media (max-width: 450px) {
+      letter-spacing: 0;
+    }
+    @media (max-width: 300px) {
+      font-size: 40px;
+    }
   `,
 }
 
@@ -44,7 +50,7 @@ export default function Title() {
           interval={4000}
           enableMouseEvents={true}
         >
-          <div>
+          <Box>
             <Typography
               variant="p"
               component="p"
@@ -60,8 +66,8 @@ export default function Title() {
             >
               JAE KIM
             </Typography>
-          </div>
-          <div>
+          </Box>
+          <Box>
             <Typography
               variant="p"
               component="p"
@@ -77,7 +83,7 @@ export default function Title() {
             >
               WEB DEVELOPER
             </Typography>
-          </div>
+          </Box>
         </AutoPlaySwipeableViews>
       </Box>
     </FadeInSection> 
